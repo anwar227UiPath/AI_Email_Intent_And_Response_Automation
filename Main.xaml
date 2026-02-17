@@ -115,7 +115,7 @@
       <AssemblyReference>C05AFF28FF0_categori.RbXiBzdNvO1lA39c16ffsD4</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="897.2,2623.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="897.2,3472" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(umm:Office365Message)" Name="Emails_List" />
       <Variable x:TypeArguments="uiascb2:categorize_Create" Name="categorize">
@@ -132,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,445.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.4,445.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,335.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -174,7 +174,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <umam:ForEachEmailConnections ConnectionAccountName="{x:Null}" Filter="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID3}" FreeTextFilter="{x:Null}" Length="{x:Null}" Mailbox="{x:Null}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inbox" BrowserFolderId="Inbox" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" CurrentItemVariableName="CurrentEmail" DisplayName="For Each Email" FilterSelectionMode="ConditionBuilder" sap:VirtualizedContainerService.HintSize="520,2106.4" sap2010:WorkflowViewState.IdRef="ForEachEmailConnections_1" Importance="Any" IncludeSubfolders="False" MarkAsRead="False" MaxResults="100" OrderByDate="NewestFirst" SelectionMode="Browse" UnreadOnly="False" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="False">
+    <umam:ForEachEmailConnections ConnectionAccountName="{x:Null}" Filter="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID11}" FreeTextFilter="{x:Null}" Length="{x:Null}" Mailbox="{x:Null}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inbox" BrowserFolderId="Inbox" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" CurrentItemVariableName="CurrentEmail" DisplayName="For Each Email" FilterSelectionMode="ConditionBuilder" sap:VirtualizedContainerService.HintSize="486.4,2955.2" sap2010:WorkflowViewState.IdRef="ForEachEmailConnections_1" Importance="Any" IncludeSubfolders="False" MarkAsRead="False" MaxResults="100" OrderByDate="NewestFirst" SelectionMode="Browse" UnreadOnly="False" UseConnectionService="True" UseSharedMailbox="False" WithAttachmentsOnly="False">
       <umam:ForEachEmailConnections.Body>
         <ActivityAction x:TypeArguments="umm:Office365Message, x:Int32">
           <ActivityAction.Argument1>
@@ -183,19 +183,20 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentEmailIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,1814.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,2663.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Lang" />
               <Variable x:TypeArguments="uiascb:languageminus_signdetection_Create" Name="Lang_Object" />
               <Variable x:TypeArguments="x:String" Name="masked_Text" />
               <Variable x:TypeArguments="x:String" Name="Contetnt_Categorize" />
+              <Variable x:TypeArguments="x:String" Name="Translated_Text" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1UXU/bMBT9K5afQ1a6gVglHmhZWTdYI1LYpAkhN7ltvLp28AfQVf3vu26crEA2UB9a314fn3Pusdd0yEHkZqCkZVyCpr01TYHprGBTAdWftPfzJqIjWTrbFNb0G1sC7VELj5ZG9JSbUrBVKE5CEUymeWm5kr5YAPHdZKY0eSh4VhCLJcHk3LE5EG6IVWQKJAcLmYU8RojJqvSAxmou5xUknyPaehPRS7hzXENOe1Y7iCop5ypj4cC+yld0g9THzrZyr49+wf80MGjItYrJn3e1EU6VtmOde2f3K8pgLO3NmDBI+RJMqaSBWkK9HjjN7L+VVYIQfSwHTN4zUzVuokbaF25va1p7FVG/tV0oOa9noKa/cN2qVgdqoYdkVWRwaG1WRNsy9sx4DjIDYjKlscpk/nTqmcp3fbviCbNFPJIW5mgBHp+CvucZxCeo4J5bDiZOv3+Stvo56BycDIfdo+Gw0+hdcunMrc9JI/x2oAENjftO5gLi1zsj0oYcp1eHP4ru6m42GO8PD47GqmsU+3b2ISLXoA1uP96PO/6D+52wTsOxBGc1ExFJ3FTw7CusJmoB8lg6IejriXjj6PF+Gpz5tjuE4QavyEgay9D+hGkcuEWO/oIHroi2ZYtgeP8l6lca6WHZ8RKnsBe+GNf5ApvCBFZhVHVGkco2Ec8u1ZPUfba2vABbKCRHE4V6kZxXJfhvyGvg9lB6eiwrAF1QC1deM4GGVS9AVe9r9WBAjywsQz3RfMn0CsWExyth2QKhdoV33z9VHg6vAkjOQJ6MyN/M7Xbuohx24o+NA/+9W2/yaVxClXrv7zaIL8wbpxOseZK4eteK0hzZo+DXF+wxwWWKXtNet9NBSGb6CL/AN2pQYLc3NATQv919obLF1rrNH9bs4isiBgAA" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Detect Language" sap:VirtualizedContainerService.HintSize="484.8,220" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="a5718756-c0e8-37e8-b2b4-5f9bd0e3896f">
+            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1UXU/bMBT9K5afQ1a6gVglHmhZWTdYI1LYpAkhN7ltvLp28AfQVf3vu26crEA2UB9a314fn3Pusdd0yEHkZqCkZVyCpr01TYHprGBTAdWftPfzJqIjWTrbFNb0G1sC7VELj5ZG9JSbUrBVKE5CEUymeWm5kr5YAPHdZKY0eSh4VhCLJcHk3LE5EG6IVWQKJAcLmYU8RojJqvSAxmou5xUknyPaehPRS7hzXENOe1Y7iCop5ypj4cC+yld0g9THzrZyr49+wf80MGjItYrJn3e1EU6VtmOde2f3K8pgLO3NmDBI+RJMqaSBWkK9HjjN7L+VVYIQfSwHTN4zUzVuokbaF25va1p7FVG/tV0oOa9noKa/cN2qVgdqoYdkVWRwaG1WRNsy9sx4DjIDYjKlscpk/nTqmcp3fbviCbNFPJIW5mgBHp+CvucZxCeo4J5bDiZOv3+Stvo56BycDIfdo+Gw0+hdcunMrc9JI/x2oAENjftO5gLi1zsj0oYcp1eHP4ru6m42GO8PD47GqmsU+3b2ISLXoA1uP96PO/6D+52wTsOxBGc1ExFJ3FTw7CusJmoB8lg6IejriXjj6PF+Gpz5tjuE4QavyEgay9D+hGkcuEWO/oIHroi2ZYtgeP8l6lca6WHZ8RKnsBe+GNf5ApvCBFZhVHVGkco2Ec8u1ZPUfba2vABbKCRHE4V6kZxXJfhvyGvg9lB6eiwrAF1QC1deM4GGVS9AVe9r9WBAjywsQz3RfMn0CsWExyth2QKhdoV33z9VHg6vAkjOQJ6MyN/M7Xbuohx24o+NA/+9W2/yaVxClXrv7zaIL8wbpxOseZK4eteK0hzZo+DXF+wxwWWKXtNet9NBSGb6CL/AN2pQYLc3NATQv919obLF1rrNH9bs4isiBgAA" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Detect Language" sap:VirtualizedContainerService.HintSize="451.2,220" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="a5718756-c0e8-37e8-b2b4-5f9bd0e3896f">
               <isactr:ConnectorActivity.FieldObjects>
                 <isactr:FieldObject Name="text" Type="FieldArgument">
                   <isactr:FieldObject.Value>
@@ -214,7 +215,7 @@
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1W23LbNhD9FQ6f0hnVVZOZttGbJd9UX6SxrOSh44cVuSZhggCzAKxQHn9Ov6Q/1iVFKQKoNH3wWDjYPdg9u8TiNb4QKFMz0cqCUEjx6DVeIFCSw0ridjMe/fU4iKeqcnYPvMZ3UGI8ikUDP+BXGw/iM2EqCXW3swPRJCQqK7TqwMjqaIWRJVBGgsX0hM0e6qpxMpaEyni90GRnlDYR/d6SiIz9X98G8T1+cYIwjUeWHA62GdzoBLojxjqt47fBPkIJKnOQYS/Am4MNL8hFhYl4qqOdZy9gBn4Q8x+D+Fy5slXqE0jX2J0+kSiAOdro9miZA4nExwhWIWQMR23QBzdIKxDPoISHj53MmBSUj6LKQAaW2qjQbgIWZIhtMMk95DNK4yNnHEYAXSKVAdMlIRYecq4yGTouqj7ZubG6F+wYzBf+cQjNkUxodiFUj++CUAVJTamXASuWhGyX7hmI+80Dr3BFuPYhoVLfaEKa/QK6K6eOlOuUSuylO+XS9DCVasUfSAD/Caxh2DGXqCkLLa9hA4Wf9nVechv7RkpBCj6mCUMuRylrGL3jH1z6Z/GTv11TVm886Aa0vxY2d1z9gPgG7EuI3XKfZmDqAEyQBTlmW/Nf6aNaZbqn6G1T3Vz0/YOvjCsU6HuHVfiJnTkbdNmdpjU2VYjejXVR/vO39EWapcLXee7UM98IPsZhB706B5NbX8w5X0kucxwmn0WwEcFRh/vb3xBY3GsuYyjQvTO9fltI/QJFD+r38IIZA41O5ap/yIIvtx625hwCBJuGC61yERzxAKWQPoKSU/ehHAIvR0XIvqyz3Pkfx7IgHp9hsEtKffrlZhXcfZ8EWtW/2Cc5D+MGezyYffGNhnRcn+ETOGl34+9cNZN6aZBmL0gkUtztzLUR3USbkyiBmvb9n+OTz505e3TifxuDx8f+wZQ8+gLI/UnKNifR5xwJI+OqinsQ00Fk2Uq3AURrIeW38SssUusoFE/lxgyqinTF16dlhvagSFMEsuInDNofzOkPW0HQsJ5PIA0Lco+m0orF7wTarSeuPfh7um3lYvapueVe2Hm1Zluft0eWf6qMBZXgnK+YEjkZ1pbr3oyslubXk+HJkFn4RaYwsZqusWbYiYpvpJ+7fyAoLdjoNLHiRdi6S3AXIddu9czOYcF448ra6hZtrjmmpkFs0xJNFlJsMN3xhaVs4oEkR85XF65qu7SJ+22Hj0mvuQOnFssO7zqOo+/ej3NICn5LHWb6/oOfanfsUsw5yegS1ek06kISfN6B5SHLb8OTj/uUv9OL/yXJrGo6ass24Xl2RKfZ4oGxJipe/XLovH9DjmJUvL6Fr3NeLljNePR+OGQmMGNmLbj1JjlbN8J1ndZ8P2Opk6KV6O1f29jC340LAAA=" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="484.8,245.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
+            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACo1W23LbNhD9FQ6f0hnVVZOZttGbJd9UX6SxrOSh44cVuSZhggCzAKxQHn9Ov6Q/1iVFKQKoNH3wWDjYPdg9u8TiNb4QKFMz0cqCUEjx6DVeIFCSw0ridjMe/fU4iKeqcnYPvMZ3UGI8ikUDP+BXGw/iM2EqCXW3swPRJCQqK7TqwMjqaIWRJVBGgsX0hM0e6qpxMpaEyni90GRnlDYR/d6SiIz9X98G8T1+cYIwjUeWHA62GdzoBLojxjqt47fBPkIJKnOQYS/Am4MNL8hFhYl4qqOdZy9gBn4Q8x+D+Fy5slXqE0jX2J0+kSiAOdro9miZA4nExwhWIWQMR23QBzdIKxDPoISHj53MmBSUj6LKQAaW2qjQbgIWZIhtMMk95DNK4yNnHEYAXSKVAdMlIRYecq4yGTouqj7ZubG6F+wYzBf+cQjNkUxodiFUj++CUAVJTamXASuWhGyX7hmI+80Dr3BFuPYhoVLfaEKa/QK6K6eOlOuUSuylO+XS9DCVasUfSAD/Caxh2DGXqCkLLa9hA4Wf9nVechv7RkpBCj6mCUMuRylrGL3jH1z6Z/GTv11TVm886Aa0vxY2d1z9gPgG7EuI3XKfZmDqAEyQBTlmW/Nf6aNaZbqn6G1T3Vz0/YOvjCsU6HuHVfiJnTkbdNmdpjU2VYjejXVR/vO39EWapcLXee7UM98IPsZhB706B5NbX8w5X0kucxwmn0WwEcFRh/vb3xBY3GsuYyjQvTO9fltI/QJFD+r38IIZA41O5ap/yIIvtx625hwCBJuGC61yERzxAKWQPoKSU/ehHAIvR0XIvqyz3Pkfx7IgHp9hsEtKffrlZhXcfZ8EWtW/2Cc5D+MGezyYffGNhnRcn+ETOGl34+9cNZN6aZBmL0gkUtztzLUR3USbkyiBmvb9n+OTz505e3TifxuDx8f+wZQ8+gLI/UnKNifR5xwJI+OqinsQ00Fk2Uq3AURrIeW38SssUusoFE/lxgyqinTF16dlhvagSFMEsuInDNofzOkPW0HQsJ5PIA0Lco+m0orF7wTarSeuPfh7um3lYvapueVe2Hm1Zluft0eWf6qMBZXgnK+YEjkZ1pbr3oyslubXk+HJkFn4RaYwsZqusWbYiYpvpJ+7fyAoLdjoNLHiRdi6S3AXIddu9czOYcF448ra6hZtrjmmpkFs0xJNFlJsMN3xhaVs4oEkR85XF65qu7SJ+22Hj0mvuQOnFssO7zqOo+/ej3NICn5LHWb6/oOfanfsUsw5yegS1ek06kISfN6B5SHLb8OTj/uUv9OL/yXJrGo6ass24Xl2RKfZ4oGxJipe/XLovH9DjmJUvL6Fr3NeLljNePR+OGQmMGNmLbj1JjlbN8J1ndZ8P2Opk6KV6O1f29jC340LAAA=" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Translate" sap:VirtualizedContainerService.HintSize="451.2,245.6" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="44a6e8db-407e-373a-b4eb-84997a6c83fd">
               <isactr:ConnectorActivity.FieldObjects>
                 <isactr:FieldObject Name="inputText" Type="FieldArgument">
                   <isactr:FieldObject.Value>
@@ -228,12 +229,12 @@
                 </isactr:FieldObject>
                 <isactr:FieldObject Name="out_translatedText" Type="FieldArgument">
                   <isactr:FieldObject.Value>
-                    <OutArgument x:TypeArguments="x:String" />
+                    <OutArgument x:TypeArguments="x:String">[Translated_Text]</OutArgument>
                   </isactr:FieldObject.Value>
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <isactr:ConnectorActivity Configuration="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" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="PII Filtering" sap:VirtualizedContainerService.HintSize="484.8,276.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="7439dcbc-32df-3cce-82d2-1c14ac68b65d">
+            <isactr:ConnectorActivity Configuration="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" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="PII Filtering" sap:VirtualizedContainerService.HintSize="451.2,276.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="7439dcbc-32df-3cce-82d2-1c14ac68b65d">
               <isactr:ConnectorActivity.FieldObjects>
                 <isactr:FieldObject Name="text" Type="FieldArgument">
                   <isactr:FieldObject.Value>
@@ -263,7 +264,7 @@
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVVW4/aOhD+K1aec3LYbbttUfdIS1pO6Q1UON0jVVVlnAFcHDv1hV2K8t87TgwkXHZV8QCe+zcz37CJ+hxEZlIlLeUSdNTdRGOgmi3oVECtjLpfv8XRQBbO7gSb6BPNIepGDD1B2iiOXnNTCLoO8nQvB8M0LyxXEuWTBZDgQ6wijFqYK81/QUImC25I7owlUyCFViueQUaoIZQYq7mcJxhtsi58+FqA77HSdqgzX/mzKhefY5pNNFKGh5QjzXOq11EZR5/BFEoajGC1A//+6biGbPuu8H1QWFXt2lOZ99ujDeWCOQbcUrUwt1QBgJr+AGbbAK6wAKVzalGfcea9se5XNda4/vqnij6jTtgvVDgMtSkfwR3jMHKE7cfRxaq3gSsI28ctz+aA+k10y2Wm7ibciiNYtaoNblQPajfJyjBVwuXyPawPwqybunYc30aiZsT6BTlh/ZZX5T9oVnVkm7IZvmXQztt4PRw3FPCQfVn++UplrTLbO3WQq8G1FoTxAneIZCcKC0SbAm5Og2tZQghuGoF7mhcCYs+2zDFLjCsKH8tytgRrYsKQjioHTTSsONyhBCx7hIfPH+fhyabE0VCmVK6oqXtX4tUZOnvy7Lzj9vsez1ky1qpWs/a1/8dH1C6SAfZorqtKxqBXnEFyg6xYYdlgkvHtG2nrn2nn2U2/f/mi3+80cn9PNeAj6TmZCUiOFDE55Zd8nv7Pe7+yT6vhhbh58pJdXM1m5vXTmHwBbbCU64uk4z/ojlR3Gq4lOKupiMnITQVnnlxqCfJaOiGieu/A4IbOqDBwfOoOW1539qjpeOgNNreyDmM4On/rc9e+yZzjs8/lDDQyY2d1sKYntmq3R+XjALfv1OEwz/PvDO7yG6YYSGOpZDCiGnFZnIRf4TAR9K1mUl0FKfF6K41DQLHjBS7SX+GLcp0t0Sgs0Tpg2paFiavTf/CPUm3qW2uLj2AXCqv3zLGeK7524Um7DXhqx1PKFoAw1dIV1bXylZdbeU+rOwN6YCEP8sBFrD/8vY8oW9I5NLFePmmDDXlr2pB/Qd4MyJ4pTctmlKtO8nIH+gGWnu/KsICant6l4tRRq4bjCcp8Xfj6u+X9gcq5Q2SoAH9hP9L7ET7HXtu97HQwFDU9DLvElUsXaO17F3ZsAve2JxRbVl0qfwMCwdi+LwkAAA==" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Categorize" sap:VirtualizedContainerService.HintSize="484.8,320" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="f6c9a20f-7e4c-3114-977f-69cc35299639">
+            <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVVW4/aOhD+K1aec3LYbbttUfdIS1pO6Q1UON0jVVVlnAFcHDv1hV2K8t87TgwkXHZV8QCe+zcz37CJ+hxEZlIlLeUSdNTdRGOgmi3oVECtjLpfv8XRQBbO7gSb6BPNIepGDD1B2iiOXnNTCLoO8nQvB8M0LyxXEuWTBZDgQ6wijFqYK81/QUImC25I7owlUyCFViueQUaoIZQYq7mcJxhtsi58+FqA77HSdqgzX/mzKhefY5pNNFKGh5QjzXOq11EZR5/BFEoajGC1A//+6biGbPuu8H1QWFXt2lOZ99ujDeWCOQbcUrUwt1QBgJr+AGbbAK6wAKVzalGfcea9se5XNda4/vqnij6jTtgvVDgMtSkfwR3jMHKE7cfRxaq3gSsI28ctz+aA+k10y2Wm7ibciiNYtaoNblQPajfJyjBVwuXyPawPwqybunYc30aiZsT6BTlh/ZZX5T9oVnVkm7IZvmXQztt4PRw3FPCQfVn++UplrTLbO3WQq8G1FoTxAneIZCcKC0SbAm5Og2tZQghuGoF7mhcCYs+2zDFLjCsKH8tytgRrYsKQjioHTTSsONyhBCx7hIfPH+fhyabE0VCmVK6oqXtX4tUZOnvy7Lzj9vsez1ky1qpWs/a1/8dH1C6SAfZorqtKxqBXnEFyg6xYYdlgkvHtG2nrn2nn2U2/f/mi3+80cn9PNeAj6TmZCUiOFDE55Zd8nv7Pe7+yT6vhhbh58pJdXM1m5vXTmHwBbbCU64uk4z/ojlR3Gq4lOKupiMnITQVnnlxqCfJaOiGieu/A4IbOqDBwfOoOW1539qjpeOgNNreyDmM4On/rc9e+yZzjs8/lDDQyY2d1sKYntmq3R+XjALfv1OEwz/PvDO7yG6YYSGOpZDCiGnFZnIRf4TAR9K1mUl0FKfF6K41DQLHjBS7SX+GLcp0t0Sgs0Tpg2paFiavTf/CPUm3qW2uLj2AXCqv3zLGeK7524Um7DXhqx1PKFoAw1dIV1bXylZdbeU+rOwN6YCEP8sBFrD/8vY8oW9I5NLFePmmDDXlr2pB/Qd4MyJ4pTctmlKtO8nIH+gGWnu/KsICant6l4tRRq4bjCcp8Xfj6u+X9gcq5Q2SoAH9hP9L7ET7HXtu97HQwFDU9DLvElUsXaO17F3ZsAve2JxRbVl0qfwMCwdi+LwkAAA==" ConnectionId="87e88867-afaa-41eb-83a9-ff05aff28ff0" DisplayName="Categorize" sap:VirtualizedContainerService.HintSize="451.2,324" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="f6c9a20f-7e4c-3114-977f-69cc35299639">
               <isactr:ConnectorActivity.FieldObjects>
                 <isactr:FieldObject Name="content" Type="FieldArgument">
                   <isactr:FieldObject.Value>
@@ -292,9 +293,150 @@
                 </isactr:FieldObject>
               </isactr:ConnectorActivity.FieldObjects>
             </isactr:ConnectorActivity>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Langauge : &quot; + Lang.ToString()]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484.8,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Category :  &quot;+ Contetnt_Categorize.ToString]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,331.2" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Langauge : &quot; + Lang.ToString()]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Category :  &quot;+ Contetnt_Categorize.ToString]" />
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Contetnt_Categorize.ToString]" sap:VirtualizedContainerService.HintSize="451.2,953.6" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch.Default>
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Unknown intent email | Subject: &quot; + CurrentEmail.Subject + &quot; | From: &quot; + CurrentEmail.From.Address]" />
+                </Sequence>
+              </Switch.Default>
+              <Sequence x:Key="Refund" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umam:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID2}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID3}" ManualEntryFolder="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Refund" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKOwAAAA==" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" DisplayName="Move Email" Email="[CurrentEmail]" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_1" SelectionMode="Browse" UseConnectionService="True" UseSharedMailbox="False">
+                  <umam:MoveEmailConnections.MailFolderArgument>
+                    <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Refund" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKOwAAAA==" ConnectionKey="3408cd6f-b377-4763-b7d2-744f0d771f8c" SelectionMode="Browse">
+                      <umamm:MailFolderArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID2" StoredValue="Browse">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailFolderArgument.Backup>
+                    </umamm:MailFolderArgument>
+                  </umam:MoveEmailConnections.MailFolderArgument>
+                  <umam:MoveEmailConnections.MailboxArg>
+                    <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+                      <umamm:MailboxArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID3" StoredValue="NoMailbox">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailboxArgument.Backup>
+                    </umamm:MailboxArgument>
+                  </umam:MoveEmailConnections.MailboxArg>
+                </umam:MoveEmailConnections>
+              </Sequence>
+              <Sequence x:Key="Complaint" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umam:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID4}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID5}" ManualEntryFolder="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Complaint" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPAAAAA==" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" DisplayName="Move Email" Email="[CurrentEmail]" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_2" SelectionMode="Browse" UseConnectionService="True" UseSharedMailbox="False">
+                  <umam:MoveEmailConnections.MailFolderArgument>
+                    <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Complaint" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPAAAAA==" ConnectionKey="3408cd6f-b377-4763-b7d2-744f0d771f8c" SelectionMode="Browse">
+                      <umamm:MailFolderArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID4" StoredValue="Browse">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailFolderArgument.Backup>
+                    </umamm:MailFolderArgument>
+                  </umam:MoveEmailConnections.MailFolderArgument>
+                  <umam:MoveEmailConnections.MailboxArg>
+                    <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+                      <umamm:MailboxArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID5" StoredValue="NoMailbox">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailboxArgument.Backup>
+                    </umamm:MailboxArgument>
+                  </umam:MoveEmailConnections.MailboxArg>
+                </umam:MoveEmailConnections>
+              </Sequence>
+              <Sequence x:Key="Inquiry" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umam:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID6}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID7}" ManualEntryFolder="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Inquiry" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPQAAAA==" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" DisplayName="Move Email" Email="[CurrentEmail]" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_3" SelectionMode="Browse" UseConnectionService="True" UseSharedMailbox="False">
+                  <umam:MoveEmailConnections.MailFolderArgument>
+                    <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Inquiry" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPQAAAA==" ConnectionKey="3408cd6f-b377-4763-b7d2-744f0d771f8c" SelectionMode="Browse">
+                      <umamm:MailFolderArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID6" StoredValue="Browse">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailFolderArgument.Backup>
+                    </umamm:MailFolderArgument>
+                  </umam:MoveEmailConnections.MailFolderArgument>
+                  <umam:MoveEmailConnections.MailboxArg>
+                    <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+                      <umamm:MailboxArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID7" StoredValue="NoMailbox">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailboxArgument.Backup>
+                    </umamm:MailboxArgument>
+                  </umam:MoveEmailConnections.MailboxArg>
+                </umam:MoveEmailConnections>
+              </Sequence>
+              <Sequence x:Key="Cancellation" DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,343.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <umam:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID8}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID9}" ManualEntryFolder="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BodyAsHtml="False" BrowserFolder="Cancellation" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPgAAAA==" ConnectionId="3408cd6f-b377-4763-b7d2-744f0d771f8c" DisplayName="Move Email" Email="[CurrentEmail]" sap:VirtualizedContainerService.HintSize="416,279.2" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_4" SelectionMode="Browse" UseConnectionService="True" UseSharedMailbox="False">
+                  <umam:MoveEmailConnections.MailFolderArgument>
+                    <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Cancellation" BrowserFolderId="AQMkADAwATM0MDAAMS02MWM2LTBjMmItMDACLTAwCgAuAAADZ05qsvDrokq2kNZ7VgBQJQEAqDijREM6EEa7xQU90NlI0wACN9NKPgAAAA==" ConnectionKey="3408cd6f-b377-4763-b7d2-744f0d771f8c" SelectionMode="Browse">
+                      <umamm:MailFolderArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID8" StoredValue="Browse">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailFolderArgument.Backup>
+                    </umamm:MailFolderArgument>
+                  </umam:MoveEmailConnections.MailFolderArgument>
+                  <umam:MoveEmailConnections.MailboxArg>
+                    <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+                      <umamm:MailboxArgument.Backup>
+                        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID9" StoredValue="NoMailbox">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </umamm:MailboxArgument.Backup>
+                    </umamm:MailboxArgument>
+                  </umam:MoveEmailConnections.MailboxArg>
+                </umam:MoveEmailConnections>
+              </Sequence>
+            </Switch>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Email is moved to : &gt;&gt;&gt;&quot;+Contetnt_Categorize.ToString +&quot;&lt;&lt;&lt; Folder&quot;]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,48" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -305,6 +447,12 @@
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[masked_Text]" />
                 </Sequence>
               </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
           </Sequence>
         </ActivityAction>
@@ -319,7 +467,7 @@
       <umam:ForEachEmailConnections.MailFolderArgument>
         <umamm:MailFolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolder="{x:Null}" BrowserFolder="Inbox" BrowserFolderId="Inbox" ConnectionKey="3408cd6f-b377-4763-b7d2-744f0d771f8c" SelectionMode="Browse">
           <umamm:MailFolderArgument.Backup>
-            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID3" StoredValue="Browse">
+            <usau:BackupSlot x:TypeArguments="umame:ItemSelectionMode" x:Name="__ReferenceID11" StoredValue="Browse">
               <usau:BackupSlot.BackupValues>
                 <scg:Dictionary x:TypeArguments="umame:ItemSelectionMode, scg:List(x:Object)" />
               </usau:BackupSlot.BackupValues>
@@ -328,10 +476,10 @@
         </umamm:MailFolderArgument>
       </umam:ForEachEmailConnections.MailFolderArgument>
       <umam:ForEachEmailConnections.MailboxArg>
-        <umamm:MailboxArgument Backup="{x:Reference __ReferenceID2}" SharedMailbox="{x:Null}" UseSharedMailbox="False" />
+        <umamm:MailboxArgument Backup="{x:Reference __ReferenceID10}" SharedMailbox="{x:Null}" UseSharedMailbox="False" />
       </umam:ForEachEmailConnections.MailboxArg>
       <umam:ForEachEmailConnections.MailboxBackup>
-        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID2" StoredValue="NoMailbox">
+        <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID10" StoredValue="NoMailbox">
           <usau:BackupSlot.BackupValues>
             <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
           </usau:BackupSlot.BackupValues>
@@ -344,7 +492,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </umam:ForEachEmailConnections>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.4,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,376" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
