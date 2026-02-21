@@ -4,7 +4,9 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[2.0.0]",
     "UiPath.IntegrationService.Activities": "[1.23.0]",
+    "UiPath.Mail.Activities": "[2.7.0-preview]",
     "UiPath.MicrosoftOffice365.Activities": "[3.6.10]",
     "UiPath.System.Activities": "[25.12.1]"
   },
